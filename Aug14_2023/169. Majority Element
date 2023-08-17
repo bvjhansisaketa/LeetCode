@@ -1,0 +1,24 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        d = []
+        dc = []
+
+        for i in range(len(nums)):
+            k = 0
+            if nums[i] not in d:
+                for j in range(len(nums)):
+                    if nums[i] == nums[j]:
+                        k = k + 1
+                d.append(nums[i])
+                dc.append(k)
+        return (d[dc.index(max(dc))])
+
+        # print(d,dc)
+
+
+
+
+
+
+
+
